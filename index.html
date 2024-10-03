@@ -15,15 +15,30 @@
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f0f0f0;
+            background-color: #18011c;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: center;
             position: relative;
             z-index: 1;
         }
-        h1 {
-            font-family: 'Comic Sans MS', cursive, sans-serif;
+          h1 {
+				font-family: 'Comic Sans MS', cursive, sans-serif;
+				color: #ffff00; /* Changed to yellow color */
+				animation: glow 2s infinite; /* Added a glow animation */
+			}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px #ffff00;
+  }
+  50% {
+    text-shadow: 0 0 20px #ffff00;
+  }
+  100% {
+    text-shadow: 0 0 10px #ffff00;
+  }
+}
         }
         .button-container {
             display: flex;
@@ -32,7 +47,7 @@
         }
         .button {
             padding: 10px 20px;
-            background-color: #007bff;
+            background-color: #270b40;
             color: #ffffff;
             border: none;
             border-radius: 5px;
@@ -41,7 +56,9 @@
             opacity: 0;
         }
         .button:hover {
-            background-color: #0056b3;
+            background-color: #ffff00;
+			transform: rotate(-5deg);
+			box-shadow: 0 0 10px #ffff00;
         }
         .button.fade-in {
             opacity: 1;
@@ -50,15 +67,17 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            border: 1px solid #ddd; 
+            border: 1px solid #18011c; 
         }
         th, td {
-            border: 2px solid #333;
+            border: 2px solid #18011c;
             padding: 8px;
             text-align: center;
+			background-color: #18131a;
+			color: #ffffff;
         }
         th {
-            background-color: #f2f2f2;
+            background-color: #1c0830;
         }
         .stars {
             position: fixed;
@@ -105,7 +124,7 @@
     <div class="container">
         <h1><b>Grassdale Duts</b></h1>
         <div class="button-container">
-            <button onclick="window.location.href='https://ivory-jorry-31.tiiny.site/'" download>Download PDF</button>
+            <button class="button" onclick="window.location.href='https://ivory-jorry-31.tiiny.site/'" download>Download PDF</button>
             <button class="button" onclick="window.location.href='https://www.google.com'">Information</button>
             <button class="button" onclick="window.location.href='https://www.google.com'">Contact</button>
         </div>
